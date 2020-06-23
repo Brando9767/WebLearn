@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="referrer" content="never">
+    <title>Html Learn</title>
+
+    <style>
+        .cities{
+            background-color:black;
+            color:white;
+            margin:20px;
+            padding:20px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="font-family: Bahnschrift;background-color: darkorange;font-size: 30px;text-align: center">我的第一个标题</h1>
+    <h2>我的第二个标题</h2>
+    <h3>我的第三个标题</h3>
+    <hr/>
+    <p>我的第一个段落</p>
+    <p>我的第二个段落<br/>欸，换行了</p>
+    <a href="www.baidu.com">我的第一个链接</a>
+    <img src="../images/123.jpg" width="100" height="100" alt="HTML5"/>
+    <pre>
+        这是预格式文本pre。
+        它保留了   空格和
+        换行。
+    </pre>
+    <code>
+        for(int i=0;i<10;i++){<br/>
+            sum++;<br/>
+            ++sun;<br/>
+            this is &#60;code&#62;<br/>
+        }
+    </code>
+    <address id="address">
+        Written by <a href="liwj@hereit.com.cn">Brando9767</a>.<br>
+        Visit us at:<br>
+        github.com<br>
+        Box 602, 137Yard<br>
+        CN<br>
+        这是地址address
+    </address>
+    <abbr title="intersting">int</abbr><br/>
+    <acronym tltle="我带你们打">WDNMD</acronym><br/>
+    <cite>The Dream</cite><br/>
+    <bdo dir="rtl">hello world</bdo><br/>
+    <blockquote>
+        这是长的引用blockquote，djaoijfoaijfiasojfsakgjalg.fjwajgjfosa。绝对是卡价格i哦我去囧的沙发大家死傲娇佛奥机构的那参数，挂机哦我的家哇哦的骄傲见到的骄傲的骄傲
+    </blockquote>
+    <q>这是短的引用q</q>
+    <del>这是删除字del</del>
+    <ins>这是下划线文本ins</ins>
+    <strong>这是加重语气strong</strong>
+    <em>这是着重文字em</em>
+    <sub>这是下标字sub</sub>
+    <sup>这是上标字sup</sup>
+    <a href="#address">这是一个到地址的锚</a>
+    <table border="1">
+        <th>我是一个表格Table</th>
+        <tr>
+            <td>单元1</td>
+            <td>单元2</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>单元4</td>
+        </tr>
+    </table>
+    <ul>
+        <li>我是无序列表ul</li>
+        <li>哈哈哈</li>
+    </ul>
+    <ol>
+        <li>我是有序列表ol</li>
+        <li>嘿嘿嘿</li>
+    </ol>
+    <dl>
+        <dt>我是一个自定义列表dl</dt>
+        <dd>我是列表项定义dd</dd>
+        <dt>吼吼吼</dt>
+        <dd>houhouhou</dd>
+    </dl>
+    <div>我是块级元素div</div>
+    <div>我是块级元素div</div>
+    <span>我是内联元素span</span><span>&nbsp;我是内联元素span</span>
+    <div class="cities">
+        <h2>London</h2>
+        <p>
+            London is the capital city of England.
+            It is the most populous city in the United Kingdom,
+            with a metropolitan area of over 13 million inhabitants.
+        </p>
+    </div>
+    <div class="cities">
+        <h2>Paris</h2>
+        <p>Paris is the capital and most populous city of France.</p>
+    </div>
+    <iframe src="https://www.bing.com" width="600" height="600"></iframe>
+    <br/>
+    <script type="text/javascript">
+        document.write("我是javascript脚本输出的！")
+    </script>
+    <form>
+        我是表单form: <br/>
+        <input type="text" placeholder="我是一个输入框input">
+        <select id="cars">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="audi">Audi</option>
+        </select>
+        <input type="submit">
+    </form>
+    <button style="width: 100px;height: 33px">button</button>
+    <canvas id="mCanvas" style="border: 1px solid lightgray" width="200" height="200" onmousemove="getCoordinates(event)" onmouseout="clearcoordinates"></canvas>
+    <div id="xycoordinates"></div>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="190">
+        <polygon points="100,10 40,180 190,60 10,60 160,180"
+                 style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;" />
+    </svg>
+    <p>我是用矢量图形svg绘制的五角星</p>
+    <video width="320" height="240" controls="controls">
+        <source src="../videos/movie.mp4" type="video/mp4" />
+        <source src="../videos/movie.Ogg" type="video/ogg" />
+        <object data="../videos/movie.mp4" width="320" height="240">
+            <embed src="../videos/movie.swf" width="320" height="240" />
+        </object>
+    </video>
+    <div id="dragdiv" style="width: 200px;height: 200px;border: 1px solid #aaaaaa" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <p id="dragtext">把下图拖至上方框内</p>
+    <img id="dragimg" src="../images/123.jpg" draggable="true" ondragstart="drag(event)" width="200" height="200">
+    <br/>
+    <p>下面是一个Web Workers：</p>
+    <p>计数：<output id="worker_result"></output> </p>
+    <button onclick="startWorker()">开始Worker</button>
+    <button onclick="stopWorker()">停止Worker</button>
+    <br/>
+
+    <script type="text/javascript">
+        var c = document.getElementById("mCanvas");
+        var cxt = c.getContext("2d");
+        cxt.fillStyle = "#FF0000";
+        cxt.fillRect(0,0,150,150);
+
+        function getCoordinates(e) {
+            x = e.clientX;
+            y = e.clientY;
+            document.getElementById("xycoordinates").innerHTML="Coordinates:("+x+","+y+")";
+        }
+
+        function clearCoordinates() {
+            document.getElementById("xycoordinates").innerHTML="鼠标悬停坐标";
+        }
+
+        function allowDrop(e){
+            e.preventDefault();
+        }
+        
+        function drag(e) {
+            e.dataTransfer.setData("text",e.target.id);
+        }
+        
+        function drop(e) {
+            e.preventDefault();
+            var data = e.dataTransfer.getData("text");
+            e.target.appendChild(document.getElementById(data));
+            document.getElementById("dragtext").innerHTML = "真棒";
+        }
+
+        var w;
+        function startWorker() {
+            if(typeof(Worker)!=="undefined"){
+                if(typeof (w)=="undefined"){
+                    w = new Worker("../js/demo_workers.js");
+                }
+                w.onmessage = function (event) {
+                    document.getElementById("worker_result").innerHTML = event.data;
+                };
+            }else{
+                document.getElementById("worker_result").innerHTML = "抱歉，浏览器不支持WEB WORKERS";
+            }
+        }
+
+        function stopWorker() {
+            w.terminate();
+        }
+    </script>
+</body>
+</html>
